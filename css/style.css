@@ -25,11 +25,11 @@ body {
 }
 
 #section1 {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     padding: 50px 50px;
-    max-height: 100vw;
-    height: clamp(0px, 100vh, 1020px);
+    /*max-height: 100vh;*/
     overflow: hidden;
 }
 
