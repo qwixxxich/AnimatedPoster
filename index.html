@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AnimatedPoster</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="section" id="section1">
+    <div class="main-light"></div>
+
+    <svg class="island right" viewBox="0 0 458 864" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <radialGradient id="islandGradient" cx="0" cy="0" r="1"
+                            gradientUnits="objectBoundingBox"
+                            gradientTransform="translate(1.1999 0.0925) scale(1.4737 0.9912)">
+                <stop offset="0.269" stop-color="#000000"/>
+                <stop offset="0.3858" stop-color="#916AA1"/>
+                <stop offset="0.4999" stop-color="#EB6DAD"/>
+                <stop offset="0.6106" stop-color="#E5A231"/>
+                <stop offset="0.8077" stop-color="#E62B36"/>
+                <stop offset="1" stop-color="#A587B5"/>
+            </radialGradient>
+
+            <path id="island-shape"
+                  d="M111.571 537.5C253.071 567 159.275 669.173 261.571 685.5C310.22 693.264 -21.4291 796.5 52.0709 835.5C125.571 874.5 281.571 719.5 400.071 835.5C518.571 951.5 418.308 678.252 400.072 575.496C390.148 519.579 427.965 441.579 423.071 385C416.766 312.106 455.29 63.0794 382.571 55C292.571 45.0005 309.571 0 238.571 0C202.237 0 120.072 18 17.0715 33C-85.9285 47.9999 312.071 27 281.571 101C251.071 175 356.571 264 253.071 264C149.571 264 327.479 334.469 302.071 411C280.463 476.084 44.4374 523.504 111.571 537.5Z"/>
+
+            <path id="island-text-path"
+                  d="M111.571 537.5C253.071 567 159.275 669.173 261.571 685.5C310.22 693.264 -21.4291 796.5 52.0709 835.5C125.571 874.5 281.571 719.5 400.071 835.5C518.571 951.5 418.308 678.252 400.072 575.496C390.148 519.579 427.965 441.579 423.071 385C416.766 312.106 455.29 63.0794 382.571 55C292.571 45.0005 309.571 0 238.571 0C202.237 0 120.072 18 17.0715 33C-85.9285 47.9999 312.071 27 281.571 101C251.071 175 356.571 264 253.071 264C149.571 264 327.479 334.469 302.071 411C280.463 476.084 44.4374 523.504 111.571 537.5Z"/>
+
+            <mask id="unionMask">
+                <rect width="100%" height="100%" fill="black"/>
+
+                <use href="#island-shape" fill="white"/>
+
+                <text fill="white"
+                      font-family="Arial, sans-serif"
+                      font-size="80"
+                      font-weight="700"
+                      letter-spacing="10"
+                      dominant-baseline="middle"
+                      dy="15">
+                    <textPath href="#island-text-path" startOffset="0%">
+                        <tspan dy="-30" rotate="180">E R O L P X E • E R O L P X E • E R O L P X E • E R O L P X E • E R O
+                            L P X E •
+                        </tspan>
+                        <animate
+                                attributeName="startOffset"
+                                from="0%"
+                                to="100%"
+                                dur="50s"
+                                repeatCount="indefinite"
+                        />
+                    </textPath>
+                </text>
+
+
+            </mask>
+        </defs>
+
+        <rect width="100%" height="100%" fill="url(#islandGradient)" mask="url(#unionMask)"/>
+    </svg>
+
+    <svg class="island bottom" width="780" height="707" viewBox="0 0 780 707" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <radialGradient id="paint0_radial_870_575_u" cx="0" cy="0" r="1"
+                            gradientTransform="matrix(-1070.33 700.113 -1148.88 -451.228 935.461 65.3097)"
+                            gradientUnits="userSpaceOnUse">
+                <stop offset="0.268957"/>
+                <stop offset="0.385829" stop-color="#916AA1"/>
+                <stop offset="0.499891" stop-color="#EB6DAD"/>
+                <stop offset="0.610577" stop-color="#E5A231"/>
+                <stop offset="0.807692" stop-color="#E62B36"/>
+                <stop offset="1" stop-color="#A587B5"/>
+            </radialGradient>
+
+            <path id="blob-shape-u"
+                  d="M324.194 392.515C235.194 369.015 70.6939 272.015 151.194 42.0151C231.695 -187.985 -196.805 597.518 115.695 679.017C428.194 760.516 460.287 630.668 549.195 662.517C638.103 694.366 712.195 677.518 765.195 622.517C818.195 567.516 706.194 596.513 730.194 550.513C754.194 504.513 702.195 557.015 589.195 457.515C476.195 358.015 311.453 501.026 264.194 492.015C216.936 483.004 413.194 416.015 324.194 392.515Z"/>
+
+            <path id="blob-text-path-u"
+                  d="M324.194 392.515C235.194 369.015 70.6939 272.015 151.194 42.0151C231.695 -187.985 -196.805 597.518 115.695 679.017C428.194 760.516 460.287 630.668 549.195 662.517C638.103 694.366 712.195 677.518 765.195 622.517C818.195 567.516 706.194 596.513 730.194 550.513C754.194 504.513 702.195 557.015 589.195 457.515C476.195 358.015 311.453 501.026 264.194 492.015C216.936 483.004 413.194 416.015 324.194 392.515Z"/>
+
+            <mask id="unionMask-u">
+                <rect width="100%" height="100%" fill="black"/>
+                <use href="#blob-shape-u" fill="white"/>
+
+                <text fill="white"
+                      font-family="Arial, sans-serif"
+                      font-size="80"
+                      font-weight="700"
+                      letter-spacing="10"
+                      dominant-baseline="middle"
+                      dy="30">
+                    <textPath href="#blob-text-path-u" startOffset="0%">
+                            S P A C E • S P A C E • S P A C E • S P A C E • S P A C E • S P A C E •
+                        <animate
+                                attributeName="startOffset"
+                                from="0%"
+                                to="100%"
+                                dur="50s"
+                                repeatCount="indefinite"/>
+                    </textPath>
+                </text>
+            </mask>
+        </defs>
+
+        <g style="mix-blend-mode:color-dodge">
+            <rect width="100%" height="100%" fill="url(#paint0_radial_870_575_u)" mask="url(#unionMask-u)"/>
+        </g>
+    </svg>
+
+    <svg class="island top" width="869" height="360" viewBox="0 0 869 360" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <radialGradient id="paint0_radial_875_580_u" cx="0" cy="0" r="1"
+                            gradientTransform="matrix(-958.368 -544.391 29.9555 -1033.72 1031.52 528.476)"
+                            gradientUnits="userSpaceOnUse">
+                <stop offset="0.268957"/>
+                <stop offset="0.385829" stop-color="#916AA1"/>
+                <stop offset="0.499891" stop-color="#EB6DAD"/>
+                <stop offset="0.610577" stop-color="#E5A231"/>
+                <stop offset="0.807692" stop-color="#E62B36"/>
+                <stop offset="1" stop-color="#A587B5"/>
+            </radialGradient>
+
+            <path id="wave-shape-u"
+                  d="M535.152 198.845C564.127 164.214 570.545 408.785 646.062 350.989C721.579 293.193 638.259 210.486 783.585 260.497C928.911 310.507 752.011 183.048 867.911 172.497C890.596 -191.607 205.012 134.82 44.0852 128.497C-116.841 122.174 210.591 138.73 264.085 221.452C317.579 304.175 409.859 177.145 439.084 245.997C473.438 326.928 512.145 226.342 535.152 198.845Z"/>
+
+            <path id="wave-text-path-u"
+                  d="M535.152 198.845C564.127 164.214 570.545 408.785 646.062 350.989C721.579 293.193 638.259 210.486 783.585 260.497C928.911 310.507 752.011 183.048 867.911 172.497C890.596 -191.607 205.012 134.82 44.0852 128.497C-116.841 122.174 210.591 138.73 264.085 221.452C317.579 304.175 409.859 177.145 439.084 245.997C473.438 326.928 512.145 226.342 535.152 198.845Z"/>
+
+            <mask id="unionMask-wave-u">
+                <rect width="100%" height="100%" fill="black"/>
+                <use href="#wave-shape-u" fill="white"/>
+
+                <text fill="white"
+                      font-family="Arial, sans-serif"
+                      font-size="80"
+                      font-weight="700"
+                      letter-spacing="10"
+                      dominant-baseline="middle"
+                      dy="30">
+                    <textPath href="#wave-text-path-u" startOffset="0%">
+                            G A L A X Y  •  G A L A X Y  •  G A L A X Y  •  G A L A X Y  •  G A L A X Y  •
+                        <animate
+                                attributeName="startOffset"
+                                from="100%"
+                                to="0%"
+                                dur="50s"
+                                repeatCount="indefinite"/>
+                    </textPath>
+                </text>
+            </mask>
+        </defs>
+
+        <g style="mix-blend-mode:color-dodge">
+            <rect width="100%" height="100%"
+                  fill="url(#paint0_radial_875_580_u)"
+                  mask="url(#unionMask-wave-u)"/>
+        </g>
+    </svg>
+
+
+    <div class="division2">
+        <div class="division1">
+            <div class="main-parameters">
+                <div class="img-stack">
+                    <img class="secret1" src="assets/section1/secret/1.svg" alt="">
+                    <img class="secret2" src="assets/section1/secret/2.svg" alt="">
+                </div>
+                <div class="img-stack">
+                    <img class="copy1" src="assets/section1/copy/1.svg" alt="">
+                    <img class="copy2" src="assets/section1/copy/2.svg" alt="">
+                </div>
+                <div class="img-stack">
+                    <img class="archive1" src="assets/section1/archive/1.svg" alt="">
+                    <img class="archive2" src="assets/section1/archive/2.svg" alt="">
+                </div>
+            </div>
+            <div class="centre"><img src="assets/section1/logo.svg" alt=""></div>
+        </div>
+        <div class="centre">
+            <div class="img-stack">
+                <img class="document1" src="assets/section1/document/1.svg" alt="">
+                <img class="document2" src="assets/section1/document/2.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="section" id="section2"></div>
+</body>
+</html>
