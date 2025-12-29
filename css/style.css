@@ -4,7 +4,10 @@
 * {
     box-sizing: border-box;
     text-decoration: none;
-    font-family: "Misto", serif;
+}
+
+html {
+    overflow-x: hidden;
 }
 
 body {
@@ -20,7 +23,6 @@ body {
 
 .section {
     position: relative;
-    align-items: center;
     width: 100%;
 }
 
@@ -29,7 +31,6 @@ body {
     display: flex;
     flex-direction: column;
     padding: 50px 50px;
-    /*max-height: 100vh;*/
     overflow: hidden;
 }
 
@@ -37,58 +38,43 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
-
 }
 
 .img-stack {
     display: grid;
     width: fit-content;
-
-    img {
-        grid-area: 1 / 1;
-    }
 }
 
-.secret1 {
-    animation: glitch-show 400ms infinite linear;
+.img-stack img {
+    grid-area: 1 / 1;
 }
 
-.secret2 {
-    animation: glitch-hide 400ms infinite linear;
-}
+.secret1 { animation: glitch-show 300ms infinite linear; }
+.secret2 { animation: glitch-hide 300ms infinite linear; }
 
-.copy1 {
-    animation: glitch-show 400ms infinite linear;
-}
+.copy1 { animation: glitch-show 300ms infinite linear; }
+.copy2 { animation: glitch-hide 300ms infinite linear; }
 
-.copy2 {
-    animation: glitch-hide 400ms infinite linear;
-}
+.archive1 { animation: glitch-show 300ms infinite linear; }
+.archive2 { animation: glitch-hide 300ms infinite linear; }
 
-.archive1 {
-    animation: glitch-show 400ms infinite linear;
-}
+.document1 { animation: glitch-show 300ms infinite linear; }
+.document2 { animation: glitch-hide 300ms infinite linear; }
 
-.archive2 {
-    animation: glitch-hide 400ms infinite linear;
-}
+.glitch1 { animation: glitch-show 300ms infinite linear; }
+.glitch2 { animation: glitch-hide 300ms infinite linear; }
 
-.document1 {
-    animation: glitch-show 400ms infinite linear;
-}
-
-.document2 {
-    animation: glitch-hide 400ms infinite linear;
-}
+.smirnov1 { animation: glitch-show 300ms infinite linear; }
+.smirnov2 { animation: glitch-hide 300ms infinite linear; }
 
 @keyframes glitch-show {
-    0%, 24.9%   { opacity: 0; }
-    25%, 100%     { opacity: 1; }
+    0%, 24.9% { opacity: 0; }
+    25%, 100% { opacity: 1; }
 }
 
 @keyframes glitch-hide {
-    0%, 24.9%   { opacity: 1; }
-    25%, 100%     { opacity: 0; }
+    0%, 24.9% { opacity: 1; }
+    25%, 100% { opacity: 0; }
 }
 
 .centre {
@@ -115,29 +101,17 @@ body {
     width: 700px;
     height: 700px;
     border-radius: 500px;
-
     background: radial-gradient(82.78% 82.78% at 50.12% 7.48%, #19BCF6 0%, rgba(25, 188, 246, 0) 99.52%);
     filter: blur(100px);
-    animation: orbitPath 26s linear infinite;;
+    animation: orbitPath 26s linear infinite;
 }
 
 @keyframes orbitPath {
-    0% {
-        transform: translate(500px, 300px);
-    }
-
-    33% {
-        transform: translate(-311px, -535px);
-    }
-
-    66% {
-        transform: translate(432px, -631px);
-    }
-
-    100% {
-        transform: translate(473px, -223px);
-    }
-
+    0% { transform: translate(500px, 300px); }
+    25% { transform: translate(-200px, 200px); }
+    50% { transform: translate(100px, 100px); }
+    75% { transform: translate(500px, 150px); }
+    100% { transform: translate(500px, 300px); }
 }
 
 .island {
@@ -170,3 +144,144 @@ body {
     fill: url(#islandGradient);
 }
 
+#section2 {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#section2 .img-stack {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+#c-glitch1 { left: 50%; top: 4.7%; }
+#c-glitch2 { left: 35%; top: 7.5%; }
+#c-glitch3 { left: 75%; top: 10.3%; }
+
+#c-glitch4 {
+    position: absolute;
+    left: 80%;
+}
+
+#c-glitch5 { left: 65%; top: 25%; }
+
+#c-glitch6 {
+    position: absolute;
+    left: 58%;
+    top: 60%;
+}
+
+#c-glitch6 .glitch1 { animation: glitch-1 360ms infinite steps(1, end); }
+#c-glitch6 .glitch2 { animation: glitch-2 360ms infinite steps(1, end); }
+#c-glitch6 .glitch3 { animation: glitch-3 360ms infinite steps(1, end); }
+
+#c-glitch7 {
+    position: absolute;
+    left: 9%;
+    top: 40%;
+}
+
+#c-glitch8 {
+    position: absolute;
+    left: 53%;
+    top: 180%;
+    transform: rotate(90deg);
+}
+
+#c-glitch9 {
+    position: absolute;
+    left: 10%;
+    top: 145%;
+}
+
+#c-glitch10 {
+    position: absolute;
+    left: 90%;
+    top: 145%;
+}
+
+@keyframes glitch-1 {
+    0%, 33.32% { opacity: 1; }
+    33.33%, 100% { opacity: 0; }
+}
+
+@keyframes glitch-2 {
+    0%, 33.32% { opacity: 0; }
+    33.33%, 66.65% { opacity: 1; }
+    66.66%, 100% { opacity: 0; }
+}
+
+@keyframes glitch-3 {
+    0%, 66.65% { opacity: 0; }
+    66.66%, 100% { opacity: 1; }
+}
+
+.bubble-bg,
+.bubble-anim,
+.bubble-base {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.bubble-bg {
+    width: 70%;
+    z-index: 1;
+}
+
+.bubble-anim {
+    z-index: 2;
+    transform-origin: 50% 50%;
+    animation: bubble-spin 20s linear infinite;
+}
+
+.bubble-base {
+    width: 150%;
+    z-index: 3;
+    animation: base-toggle 25000ms linear infinite;
+}
+
+@keyframes bubble-spin {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes base-toggle {
+    0%, 38.88% { opacity: 1; }
+    38.89%, 100% { opacity: 0; }
+}
+
+.coming {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    top: 20%;
+}
+
+.ascii {
+    position: absolute;
+    left: 25%;
+    top: 200%;
+    z-index: 2;
+}
+
+.sign {
+    position: absolute;
+    left: 70%;
+    top: 200%;
+}
+
+.light {
+    position: absolute;
+    left: 5%;
+    top: 260%;
+}
+
+#smirnov {
+    position: absolute;
+    left: 54%;
+    top: 305%;
+    z-index: 0;
+}
