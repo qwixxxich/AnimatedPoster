@@ -141,7 +141,7 @@ body {
     border-radius: 500px;
     background: radial-gradient(82.78% 82.78% at 50.12% 7.48%, #19BCF6 0%, rgba(25, 188, 246, 0) 99.52%);
     filter: blur(100px);
-    animation: orbitPath 26s linear infinite;
+    animation: orbitPath 15s linear infinite;
 }
 
 @keyframes orbitPath {
@@ -311,8 +311,7 @@ body {
 }
 
 .bubble-bg {
-    width:70vw;
-    max-width:none;
+    width:1000px;
     max-width:none;
     z-index: 1;
 }
@@ -378,6 +377,29 @@ body {
     left: 54%;
     top: 305%;
     z-index: 0;
+}
+
+.starfield {
+    position: absolute;
+    top: 150%;
+}
+
+.unsecret {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 81px;
+}
+
+.warning {
+    width: 60%;
+    animation: glow 1.5s infinite ease-in-out;
+}
+
+@keyframes glow {
+    0% {opacity: 1}
+    50% {opacity: 0}
+    100% {opacity: 1}
 }
 
 @media (min-width: 1600px) {
